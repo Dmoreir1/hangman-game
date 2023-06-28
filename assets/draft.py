@@ -4,19 +4,19 @@ class Hangman():
         "Welcome to 'Hangman', are you ready to die?"
         print
         "(1)Yes, for I am already dead.\n(2)No, get me outta here!"
-        user_choice_1 = raw_input("->")
+        user_choice_1 = input("-> ")
 
         if user_choice_1 == '1':
             print
-            "Loading nooses, murderers, rapists, thiefs, lunatics..."
+            "Loading ..."
             self.start_game()
         elif user_choice_1 == '2':
             print
-            "Bye bye now..."
+            "Bye ..."
             exit()
         else:
             print
-            "I'm sorry, I'm hard of hearing, could you repeat that?"
+            "Sorry!"
             self.__init__()
 
     def start_game(self):
@@ -43,9 +43,9 @@ class Hangman():
         progress = ["?", "?", "?", "?", "?"]
 
         while guesses < 6:
-            guess = raw_input("Guess a letter ->")
+            guess = input("Guess a letter ->")
 
-            if guess in the_word and not in letters_used:
+            if guess in the_word and (not in letters_used):
                 print
                 "As it turns out, your guess was RIGHT!"
                 letters_used += "," + guess
