@@ -21,3 +21,16 @@ def main():
 
 # main()
 
+#guess_pool: array of all letters guessed
+
+
+## trying out the error reporting
+if eachLetter == False and guesses > 0:
+    print("You have this many chances:" guesses)
+
+    if len(guesses) ==1:
+        if guesses in word:
+            letter_guess_pool.append(guesses)
+
+
+
